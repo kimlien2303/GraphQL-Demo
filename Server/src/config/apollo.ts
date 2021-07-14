@@ -1,8 +1,10 @@
-import { ApolloServer } from 'apollo-server-express';
+import { ApolloServer, gql } from 'apollo-server-express';
 import typeDefs from '../schema/typeDefs';
 import resolvers from '../schema/resolvers';
+
+
 const apolloServer = new ApolloServer({ 
-    typeDefs, 
+    typeDefs,
     resolvers, 
     playground: true,
     introspection: true
