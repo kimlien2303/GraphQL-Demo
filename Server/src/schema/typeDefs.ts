@@ -62,14 +62,30 @@ const typeDefs = gql`
     fileName: String
   }
 
+  type Product {
+    id: Int
+    name: String
+    position: Vector
+    rotation: Vector
+    url: String
+    fileName: String
+    price: Float
+    colors: [String]
+    sizes: [String]
+    description: String
+    thumbnail: String
+  }
+
   type Scenes {
     key: Int
     name: String
     genericSky: String
+    PosYCamMap: Int
     loadScene: LoadScene
-    meshtasks: [Mesh]
+    colliders: String
     teleports: [Teleport]
     npc: [Npc]
+    products: [Product]
   }
 
   type CountryList {
@@ -89,11 +105,17 @@ const typeDefs = gql`
     rotation: Vector
     scale: Vector
     cameraPosition: Vector
-    buttonId: String
+    defaultAnimation: String
   }
+
   type AvatarInfo {
     avatarList: [Avatar]
     meshtasks: [Mesh]
+  }
+
+  type WorldInfo {
+    scenes: [Scenes]
+    avatars: [Avatar]
   }
 
   # The "Query" type is special: it lists all of the available queries that
@@ -102,8 +124,7 @@ const typeDefs = gql`
     books: [Book]
     countryList: [CountryList]
     avatarDb: AvatarInfo
-    frames: [NpcFrames]
-    scenes: [Scenes]
+    worldInfo: WorldInfo
   }
 
   # The "Mutation" type is special: it provide available query for working with database

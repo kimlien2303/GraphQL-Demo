@@ -13,7 +13,7 @@ export const avatarDb =
         rotation: {x: 0, y: 0, z: 0},
         scale: {x: 1, y: 1, z: 1},
         cameraPosition: {x: 0, y: 0.2, z: -9},
-        buttonId: 'avarta-1',
+        defaultAnimation: 'lookaround',
       },
       {
         id: 2,
@@ -25,7 +25,7 @@ export const avatarDb =
         rotation: {x: 0, y: 0, z: 0},
         scale: {x: 1, y: 1, z: 1},
         cameraPosition: {x: 0, y: 0.2, z: -9},
-        buttonId: 'avarta-2',
+        defaultAnimation: 'lookaround',
       },
   ],
   meshtasks: [

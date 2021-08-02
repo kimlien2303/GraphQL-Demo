@@ -11,7 +11,7 @@ const resolvers = {
     books: () => books,
     countryList: () => countryList,
     avatarDb: () => avatarDb,
-    scenes: () => scenes,
+    worldInfo: () => scenes,
   },
   Mutation: {
     addBook: (parent: any, args: any, context: any, info: any) => {
